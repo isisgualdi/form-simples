@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<div class="cadastro">
+    <div class="header"> 
+        <h1>Cadastro</h1>
+    </div>
+    <form name="formulario" method="post">
+         
+        <!--Input de texto-->
+        <div id="nome-container">
+            <label for="nome">Digite o seu nome:</label>
+            <input type="text" name="nome" id="usuario">
+        </div>
+        
+        <!--Radio Button-->
+        <div id='cor-container'>
+            <p>Escolha a cor que você prefere:</p>
+            <div>
+              <input type="radio" value="Azul" name='cor' onclick="mostrarAzul()"> 
+              <label for="Azul">Azul</label>
+            </div>
+            <div>
+              <input type="radio" value="Vermelho" name='cor' onclick="mostrarVermelho()"> 
+              <label for="Vermelho">Vermelho</label>
+            </div>
+            <p id="inserir-imagem"></p>
+    
+          </div>
+
+        <!--Select-->
+        <div id="comida-container">
+            <p>Qual comida você prefere?</p>
+            <select name="select" id="select">
+                <option value="item-1">Pizza</option>
+                <option value="item-2">Hamburguer</option>
+                <option value="item-2">Lasanha</option>
+            </select>
+        </div>
+
+        <!--Checkbox que quando preenchida deve ativar o botão para finalizar-->
+        <div id="checkbox-container">
+            <input type="checkbox" name="inscrever" id="checkbox" value="newsletter" onclick='verificar(this)'>
+            <label for="inscrever">Não sou um robô.</label> 
+        </div> 
+        <div>
+            <button type="submit" id="botao" disabled='disabled'>Subscrever</button>
+        </div>
+        
+
+    </form>
+</div>
+
+   
+</body>
+</html>
